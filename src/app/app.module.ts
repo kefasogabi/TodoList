@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
+import { TodoService } from './services/todo.service';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { TodoComponent } from './todo/todo.component';
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
-  providers: [],
+  providers: [
+    TodoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
